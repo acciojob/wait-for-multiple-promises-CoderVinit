@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function createRandomPromise(index) {
         const time = Math.random() * (3 - 1) + 1; // Random time between 1 and 3 seconds
         return new Promise((resolve) => {
-            setTimeout(() => resolve({ index, time: time.toFixed(3) }), time * 1000);
+            setTimeout(() => resolve({ index, time: time.toFixed(0) }), time * 1000);
         });
     }
 
-    const promises = [createRandomPromise(1), createRandomPromise(2), createRandomPromise(3)];
+	const promises = [createRandomPromise(1),createRandomPromise(2),createRandomPromise(3)];
+
 
     const startTime = performance.now();
 
