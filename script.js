@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
     const tableBody = document.getElementById("output");
 
     // Initially, add a row that says "Loading..."
@@ -32,4 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
         totalRow.innerHTML = `<td><strong>Total</strong></td><td><strong>${totalTime}</strong></td>`;
         tableBody.appendChild(totalRow);
     });
-});
