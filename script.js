@@ -13,12 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-	const promises = [createRandomPromise(1),createRandomPromise(2),createRandomPromise(3)];
-
 
     const startTime = performance.now();
 
-    Promise.all(promises).then((results) => {
+    Promise.all([createRandomPromise(1),createRandomPromise(2),createRandomPromise(3)]).then((results) => {
         // Remove loading row
         tableBody.innerHTML = "";
 
